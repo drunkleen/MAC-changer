@@ -1,6 +1,5 @@
 import subprocess, string, random
 import regex as re
-import platform
 
 
 class Linux:
@@ -84,3 +83,4 @@ class Windows:
         enable_output = subprocess.check_output(
             f"wmic path win32_networkadapter where index={adapter_index} call enable").decode()
         return enable_output
+
