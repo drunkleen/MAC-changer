@@ -1,4 +1,3 @@
-import subprocess, string, random, re
 from getmac import get_mac_address
 import platform
 from MACaddressRelated import Windows, Linux

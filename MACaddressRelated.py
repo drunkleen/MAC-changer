@@ -1,12 +1,10 @@
 import subprocess, string, random
 import regex as re
-from getmac import get_mac_address
 import platform
 
 
-class Linux(get_mac_address):
+class Linux:
     def __init__(self):
-        super().__init__()
         self.hexdigits = ''.join(set(string.hexdigits.upper()))
         self.macaddress_string = ''
 
@@ -24,9 +22,8 @@ class Linux(get_mac_address):
         subprocess.check_output(f'ifconfig {interface} up', shell=True)
 
 
-class Windows(get_mac_address):
+class Windows:
     def __init__(self):
-        super().__init__()
         self.mac_address = None
         self.hexdigits = None
         self.adapter_index = None
